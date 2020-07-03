@@ -12,7 +12,7 @@ with open(source_file) as f:
     for raw in reader:
         interface_config = interface_template.render(
             interface = raw['interface'],
-            description = raw['destination'],
+            description = raw['description'],
             address = raw['address']
         )
         interafce_configs += interface_config
